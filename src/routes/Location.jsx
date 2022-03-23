@@ -2,10 +2,11 @@ import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Rotating from "../components/loading/Rotating";
 
-const Root = lazy(() => import("../pages/Root"));
-const NotFound = lazy(() => import("../pages/404"));
-const Meetup = lazy(() => import("../pages/Meetup"));
-const Setting = lazy(() => import("../pages/Setting"));
+const Root = lazy(() => import("../pages/root/Root"));
+const NotFound = lazy(() => import("../pages/common/404"));
+const Meetup = lazy(() => import("../pages/root/Meetup"));
+const MyGroup = lazy(() => import("../pages/root/MyGroup"));
+const Setting = lazy(() => import("../pages/root/Setting"));
 
 const routes = [
   {
@@ -19,6 +20,10 @@ const routes = [
   {
     path: "/meetup",
     element: <Meetup />,
+  },
+  {
+    path: "/my-group",
+    element: <MyGroup />,
   },
   {
     path: "/setting",

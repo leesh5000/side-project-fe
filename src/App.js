@@ -14,7 +14,7 @@ const rootButtons = [
   },
   {
     subject: "내모임",
-    path: "/",
+    path: "/my-group",
   },
   {
     subject: "설정",
@@ -34,11 +34,7 @@ const App = () => {
     if (!isLogin) {
       return "Login screen";
     }
-    return <Location />;
-  };
-
-  return (
-    <section className="bg-black opacity-80 w-full h-screen flex justify-center">
+    return (
       <div className="bg-white max-w-md w-full h-full p-2">
         <header className="flex justify-between">
           <section>
@@ -89,9 +85,15 @@ const App = () => {
               />
             ))}
           </section>
-          <section>{viewTrigger()}</section>
+          <section className="w-full mt-5">{<Location />}</section>
         </main>
       </div>
+    );
+  };
+
+  return (
+    <section className="bg-black opacity-80 w-full h-full flex justify-center">
+      {viewTrigger()}
     </section>
   );
 };
