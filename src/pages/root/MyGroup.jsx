@@ -12,7 +12,7 @@ const MyGroup = () => {
   const [joinedGroups, setJoinedGroups] = useState([]);
 
   return (
-    <section className="w-full">
+    <section>
       <Helmet>
         <title>저모이모 | 내모임</title>
       </Helmet>
