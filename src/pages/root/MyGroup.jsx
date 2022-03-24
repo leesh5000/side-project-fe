@@ -54,7 +54,7 @@ const MyGroup = () => {
         }
       </article>
       <article>
-        <section className="pl-4 pt-1 pb-1 mb-4 bg-slate-200 text-slate-600 text-sm">
+        <section className="pl-4 pt-1 pb-1 bg-slate-200 text-slate-600 text-sm">
           추천 모임
         </section>
         <section>
