@@ -5,6 +5,7 @@ services:
     image: maaaaaaaaad/emojmo-client:0.1
     build: 
       context: ./
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     ports:
       - "80:3000"
+    stdin_open: true
