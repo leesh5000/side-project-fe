@@ -5,7 +5,18 @@ import PlusButton from "../../components/button/PlusButton";
 import MyGroupBoard from "../../components/board/mygroupboard";
 
 const skeletonCount = Array(15).fill(<BoardSkeleton />);
-const recommendGroupsCount = Array(15).fill(<MyGroupBoard />);
+const recommendGroupsCount = [
+  {image: "img", category: "etc", area: "안산시", groupName: "안산kpop댄스 원데이클래스", memberCount: 20 },
+  {image: "img", category: "etc", area: "안산시", groupName: "안산kpop댄스 원데이클래스", memberCount: 20 },
+  {image: "img", category: "etc", area: "안산시", groupName: "안산kpop댄스 원데이클래스", memberCount: 20 },
+  {image: "img", category: "etc", area: "안산시", groupName: "안산kpop댄스 원데이클래스", memberCount: 20 },
+  {image: "img", category: "etc", area: "안산시", groupName: "안산kpop댄스 원데이클래스", memberCount: 20 },
+  {image: "img", category: "etc", area: "안산시", groupName: "안산kpop댄스 원데이클래스", memberCount: 20 },
+  {image: "img", category: "etc", area: "안산시", groupName: "안산kpop댄스 원데이클래스", memberCount: 20 },
+  {image: "img", category: "etc", area: "안산시", groupName: "안산kpop댄스 원데이클래스", memberCount: 20 },
+  {image: "img", category: "etc", area: "안산시", groupName: "안산kpop댄스 원데이클래스", memberCount: 20 },
+  {image: "img", category: "etc", area: "안산시", groupName: "안산kpop댄스 원데이클래스", memberCount: 20 },
+];
 
 const MyGroup = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -54,9 +65,9 @@ const MyGroup = () => {
             </li>
           ))
           :
-          recommendGroupsCount.map((skeleton, index) => (
+          recommendGroupsCount.map((data, index) => (
             <li className="list-none" key={index}>
-              {skeleton}
+              <MyGroupBoard image={data.image} category={data.category} area={data.area} groupName={data.groupName} memberCount={data.memberCount}/>
             </li>
           ))}
         </section>        
