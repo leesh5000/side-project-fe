@@ -7,6 +7,7 @@ const NotFound = lazy(() => import("../pages/common/404"));
 const Meetup = lazy(() => import("../pages/root/Meetup"));
 const MyGroup = lazy(() => import("../pages/root/MyGroup"));
 const Setting = lazy(() => import("../pages/root/Setting"));
+const MakeGroup = lazy(() => import("../pages/root/MakeGroup"));
 
 const routes = [
   {
@@ -28,6 +29,10 @@ const routes = [
   {
     path: "/setting",
     element: <Setting />,
+  },
+  {
+    path: "/make-group",
+    element: <MakeGroup />,
   },
 ];
 
