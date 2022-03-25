@@ -10,11 +10,13 @@ const Meetup = () => {
         </Helmet>
       </section>
       <section className="flex">
-        <article className="basis-1/4 mr-4 border-2 border-indigo-500 rounded-xl text-indigo-500 text-center">
+        <article className="basis-1/4 mr-3 border-2 border-indigo-500 rounded-xl text-indigo-500 text-center">
           <p>목요일</p>
           <hr className="border-indigo-500" />
-          <p className="text-xl font-semibold">오늘</p>
-          <span className="font-medium">19:40</span>
+          <div className="py-2 px-2">
+            <p className="text-xl font-semibold">오늘</p>
+            <span className="font-medium">19:40</span>
+          </div>
         </article>
         <article className="basis-3/4">
           <div className="flex mb-2">
