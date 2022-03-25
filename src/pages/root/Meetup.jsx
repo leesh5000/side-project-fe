@@ -10,7 +10,7 @@ const Meetup = () => {
         </Helmet>
       </section>
       <section className="flex">
-        <article className="basis-1/4 mr-3 border-2 border-indigo-500 rounded-xl text-indigo-500 text-center">
+        <article className="basis-1/4 mr-2 border-2 border-indigo-500 rounded-xl text-indigo-500 text-center">
           <p>목요일</p>
           <hr className="border-indigo-500" />
           <div className="py-2 px-2">
