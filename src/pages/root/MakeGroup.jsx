@@ -1,9 +1,16 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { Helmet } from "react-helmet-async";
+import { RecoilRoot, atom, selector, useRecoilState, useRecoilValue } from "recoil";
+import { yesHeaderState } from "../../state";
 
 const MakeGroup = ({ history }) => {
     const navigate = useNavigate();
+    const [yesHeader, setYesHeader] = useRecoilState(yesHeaderState);
+
+    useEffect(() => {
+        setYesHeader(false);
+    }, []);
 
     const goBack = () => {
         navigate(-1);
@@ -12,7 +19,6 @@ const MakeGroup = ({ history }) => {
     const onSubmitHandler = (e) => {
         e.preventDefault();
     }
-
     return(
         <div className="h-screen">
             <Helmet>

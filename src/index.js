@@ -5,15 +5,18 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { RecoilRoot, atom, selector, useRecoilState, useRecoilValue } from "recoil";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter basename="/">
-      <HelmetProvider>
-        <App />
-      </HelmetProvider>
-    </BrowserRouter>
-  </React.StrictMode>,
+  <RecoilRoot>
+    <React.StrictMode>
+      <BrowserRouter basename="/">
+        <HelmetProvider>
+          <App />
+        </HelmetProvider>
+      </BrowserRouter>
+    </React.StrictMode>
+  </RecoilRoot>,
   document.getElementById("root")
 );
 

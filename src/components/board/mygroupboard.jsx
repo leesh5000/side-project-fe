@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { RecoilRoot, atom, selector, useRecoilState, useRecoilValue } from "recoil";
+import { yesHeaderState } from "../../state";
 
 const MyGroupBoard = ({ image, category, area, groupName, memberCount }) => {
+    const [yesHeader, setYesHeader] = useRecoilState(yesHeaderState);
+    useEffect(() => {
+        setYesHeader(true);
+    }, []);
+
     return (
       <section className="border-b border-slate-400 py-1 px-2 w-full mx-auto">
         <article className="flex space-x-4 items-center">
