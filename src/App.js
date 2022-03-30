@@ -4,6 +4,7 @@ import Location from "./routes/Location";
 import { useRecoilValue } from "recoil";
 import { yesHeaderState } from "./state";
 import RootLayout from "./layouts/root/RootLayout";
+import Login from "./pages/root/Login";
 
 const App = () => {
   const yesHeader = useRecoilValue(yesHeaderState);
@@ -16,7 +17,11 @@ const App = () => {
 
   const viewTrigger = () => {
     if (!isLogin) {
-      return "Login screen";
+      return (
+        <div className="bg-white max-w-md w-full h-full">
+          <Login />
+        </div>
+      );
     }
     if (yesHeader) {
       return (
