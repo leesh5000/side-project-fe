@@ -4,7 +4,7 @@ import Location from "./routes/Location";
 import { useRecoilValue } from "recoil";
 import { yesHeaderState } from "./state";
 import RootLayout from "./layouts/root/RootLayout";
-import Login from "./pages/root/Login";
+import Login from "./pages/auth/Login";
 
 const App = () => {
   const yesHeader = useRecoilValue(yesHeaderState);
